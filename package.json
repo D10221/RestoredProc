@@ -17,6 +17,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-execute": "^0.2.2",
     "grunt-traceur": "^0.2.10",
+    "mocha": "^2.0.1",
     "traceur": "0.0.74"
   },
   "scripts": {
