@@ -24,7 +24,7 @@ typings/
 *.org
 # Sublime 
 *.build
-*.sublime_workspace
+*.sublime-workspace
 
 *.bak
 ssl/
