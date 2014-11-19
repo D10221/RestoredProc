@@ -1,0 +1,31 @@
+
+bin/
+.idea/
+obj/
+Properties/
+node_modules/
+typings/
+*.example
+*.sublime-project
+*.dmp
+#Visual Studio
+*.sln
+*.csproj
+*.njsproj
+*.suo
+*.cache
+
+*.dat
+
+# SSL
+*.key
+*.crt
+*.csr
+*.org
+# Sublime 
+*.build
+*.sublime_workspace
+
+*.bak
+ssl/
+
