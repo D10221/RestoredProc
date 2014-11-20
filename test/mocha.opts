@@ -1,0 +1,4 @@
+src/**/*.test.js
+--require chai
+--reporter dot
+--ui tdd

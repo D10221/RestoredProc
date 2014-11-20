@@ -8,7 +8,7 @@ public class Startup {
 		return await Task<object>.Factory.StartNew(
 			()=>{
 				var parameters = input as IDictionary<string,object>;
-				return new {echo = parameters["what"] as string };
+				return parameters["what"] as string ;
 			}
 		);
 	}

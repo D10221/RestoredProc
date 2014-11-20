@@ -15,6 +15,16 @@ module.exports = function(grunt) {
                     interrupt: true,
                     debounceDelay: 250,
                 }
+            },
+             tests: {
+                files: ['src/**/*.test.js', 'Gruntfile.js'
+                ],
+                tasks: ['exec:mocha'],
+                options: {
+                    spawn: false,
+                    interrupt: true,
+                    debounceDelay: 250,
+                }
             }
         },
         traceur: {
@@ -65,11 +75,17 @@ module.exports = function(grunt) {
                 },
                 src: ['out/compiled.js']
             }
+        },
+        exec:{
+            mocha:{
+                cmd:'mocha'
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-traceur');
     grunt.loadNpmTasks('grunt-execute');
+    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('run', ['execute:']);
     grunt.registerTask('build-run', ['traceur', 'execute:']);
