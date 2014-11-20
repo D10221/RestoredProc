@@ -1,4 +1,4 @@
 src/**/*.test.js
 --require chai
---reporter dot
+--reporter list
 --ui tdd
