@@ -2,3 +2,4 @@ src/**/*.test.js
 --require chai
 --reporter list
 --ui tdd
+--compilers js:mocha-traceur

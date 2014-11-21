@@ -11,17 +11,18 @@ function echo (what) {
     });
 }
 
+var path = '/api/echo/:what';
 
 var register = function(app){
-    app.get('/api/echo/:what', function (req,res) {
+    app.get(path, function (req,res) {
      echo(req.params.what)
         .then(
             function(data) {res.send(data); } ,
-            function(error) {res.send(500,(error ? error.message : 'Wtf?'));}
+            function(error) {res.status(500).send((error ? error.message : 'Wtf?'));}
         );
 });
 };
 
 module.exports =  {
-    register: register
+    register: register, path: path
     };
