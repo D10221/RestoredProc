@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                     interrupt: true,
-                    debounceDelay: 250,
+                    debounceDelay: 250
                 }
             },
              tests: {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                     interrupt: true,
-                    debounceDelay: 250,
+                    debounceDelay: 250
                 }
             }
         },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        execute: {
+       /* execute: {
             target: {
                 options: {
                     // execute node with additional arguments
@@ -75,19 +75,19 @@ module.exports = function(grunt) {
                 },
                 src: ['out/compiled.js']
             }
-        },
-        exec:{
+        },*/
+        /*exec:{
             mocha:{
                 cmd:'mocha'
             }
-        }
+        }*/
     });
 
     grunt.loadNpmTasks('grunt-traceur');
-    grunt.loadNpmTasks('grunt-execute');
-    grunt.loadNpmTasks('grunt-exec');
+   // grunt.loadNpmTasks('grunt-execute');
+   // grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('run', ['execute:']);
-    grunt.registerTask('build-run', ['traceur', 'execute:']);
+   // grunt.registerTask('run', ['execute:']);
+   // grunt.registerTask('build-run', ['traceur', 'execute:']);
 
 };

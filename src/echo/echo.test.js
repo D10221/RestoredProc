@@ -1,7 +1,6 @@
-/* globals describe: false , require:true*/
+/* globals describe: false , require:true */
 
 require('traceur-runtime');
-
 var traceur = require('traceur');
 
 require('chai');
@@ -13,7 +12,7 @@ describe('Echo', function(done) {
     it('Should Echo anything', function() {
         echo('hi').then(
             function(x) {
-                x.should.equal('hi');
+                x.should.equal('hi!');
                 done();
             },
             function(e) {
@@ -33,4 +32,5 @@ describe('Echo', function(done) {
             }
         );
     });
+
 });
