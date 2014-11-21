@@ -16,6 +16,12 @@
     },
     "express/express.d.ts": {
       "commit": "a6b1e4ff841e617e3d449189f82562143d98400d"
+    },
+    "chai/chai.d.ts": {
+      "commit": "07ae96e580d1ac9817d40717158fcafc875044b3"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "07ae96e580d1ac9817d40717158fcafc875044b3"
     }
   }
 }

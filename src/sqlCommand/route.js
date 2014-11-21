@@ -28,7 +28,7 @@ function executeReader(sqlCmdText /*:string*/ , cnx /*:string*/ ) {
 export
 var register = (app) => {
 
-    app.get('/api/slqCmd/:server/:db/:script', (req, res) => {
+    app.get('/api/slqCmd/:server/:db/:script', (req, res) => {       
 
         var server = req.params.server;
         var db = req.params.db;

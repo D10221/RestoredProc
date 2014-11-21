@@ -1,18 +1,35 @@
-/* globals describe: false */
+/* globals describe: false , require:true*/
 
-require('chai').should();
+require('traceur-runtime');
 
-var echo = require('./echo');
+var traceur = require('traceur');
 
-describe('Echo', function() {
+require('chai');
+
+var echo = traceur.require('./src/echo/echo.js');
+
+describe('Echo', function(done) {
    
-    it('Should Echo things', function() {
+    it('Should Echo anything', function() {
         echo('hi').then(
             function(x) {
                 x.should.equal('hi');
+                done();
             },
             function(e) {
-                e.should.equal('I want it to fail, but referenced, jshint doesnt complain without me making a jshint comment');
+                throw e;
+            }
+        );
+    });
+
+    it('Should Echo anything', function() {
+        echo(null).then(
+            function(x) {
+                x.should.equal(null);
+                done();
+            },
+            function(e) {
+                throw e;
             }
         );
     });

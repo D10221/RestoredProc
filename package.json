@@ -23,8 +23,8 @@
     "traceur": "0.0.74"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Me",
+  "license": "WTF"
 }
