@@ -19,10 +19,24 @@ OmmiSharp in Sublime needs a .sln file, that is NOT in source control.
 It simple needs to be named Random.csx.sln , or yu need to change it in randomCsx.sublime-project
 Or follow setup from Omnisharp
 
+Src:
+There's a watcher to compile index.es6.js , from there traceur.require continues the chain, required 'modules' are not offline copiled but on the fly.
+
+There's some Typescript definitions but have't used ts so far.
+
+Debugging:
+"debugger;" and log to console, thats it.
+Still a challenge with Node-inspector,Webstorm. TODO: sourceMaps , NOTE: yes, I'm contradicting myself. it smy favorite sport.
 
 Mocha:
 Vanilla setup with the exception of test location;
 Tests are located aside of what its testing
 the pattern is src/**/*.js and its configurable at test/mocha.opts , as expected
-There is grunt task watch:tests , it watches tests :), and it runs mocha in the shell... as you would.
+~~There is grunt task watch:tests , it watches tests :), and it runs mocha in the shell... as you would.~~
+
+Added mocha-traceur, no compilation step, TODO: working sourceMaps.
+Simplistic approach to testing routes, or what the route brings, there is no intention of testing express it self, the idea is to test the/my logic in the/my route config.
+Note: dirty wokaround to trigger done in src/echo/route.test.js.
+
+
 
