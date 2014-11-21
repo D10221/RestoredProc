@@ -1,18 +1,16 @@
 'use strict';
-
-var traceur = require('traceur');
-
-//Requiring module with ES6 Syntax, When Only tell Traceur to compiled this file (index.js)
-var sqlCommand = traceur.require('src/sqlCommand/route.js');
-
+/* globals require:true */
 require('traceur-runtime');
+var traceur = require('traceur');
+traceur.sourceMaps = 'file';
 var express = require('express');
 var https = require('https');
 var http = require('http');
 var fs = require('fs');
 var app = express();
+var sqlCommand = traceur.require('./src/sqlCommand/route.js');
+var echo = traceur.require('./src/echo/route.js');
 
-var echo = require('./echo/echo_route');
 
 
 var server = http.createServer(app).listen(8888, function() {
@@ -46,7 +44,7 @@ echo.register(app);
 // sqlCommand Registers its Own Route
 sqlCommand.register(app);
 
-app.use(function(req, res, next) {
+app.use((req, res, next) =>{
     res.status(404).send(':( ,Don\'t know what to do with @url.'.replace(/@url/, req.url));
     next();
 });

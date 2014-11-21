@@ -8,7 +8,7 @@ var echo = edge.func(csx);
 
 var asPromise = Q.nfcall;
 
-var promiseEcho = function(what) {
+var promiseEcho = (what) =>{
     return asPromise(echo, {
         what: what
     });

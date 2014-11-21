@@ -26,6 +26,9 @@ typings/
 *.build
 *.sublime-workspace
 
+*.map
 *.bak
 ssl/
 
+#its compiled
+index.js
